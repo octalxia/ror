@@ -1,5 +1,6 @@
 DemoApp::Application.routes.draw do
-  get "users/new"
+  resources :users
+  
   match '/', to: 'static_pages#home', via: 'get'
 
   root to: 'static_pages#home'
